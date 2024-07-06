@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+:root {
+  --main: #1e2326;
+  --secondary: #1cb698;
+  --white: #fff;
+  --grey: #252a2e;
+  --Font: "Josefin Sans";
+}
+* {
+  box-sizing: border-box;
+  font-family: var(--Font);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html {
+  /*Me permite deslizar cuando hago click en los links del menu del inicio*/
+  scroll-behavior: smooth;
+}
+/* MENU */
+
+.container-header {
+  background: var(--main);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.container-header header {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.container-header header .logo a {
+  font-family: var(--Font);
+  font-size: 36px;
+  color: var(--secondary);
+  text-decoration: None;
+  font-weight: bold;
+}
+.container-header header ul {
+  display: flex;
+  list-style: none;
+}
+.container-header header nav ul li a {
+  text-align: none;
+  color: var(--white);
+  margin: 0 15px;
+  padding: 3px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.container-header header nav ul li a:hover {
+  color: var(--secondary);
+}
+.nav_responsive {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+.fa-brands {
+  font-size: 22px;
+}
+.tecnologias{
+  font-size: 60px;
+}
+.logo {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  color: #fff;
+}
+.menu.active {
+  display: flex;
+}
+.responsive{
+  display: none;
+}
+/* Seccion Inicio */
+
+.inicio {
+  background: linear-gradient(
+      to top,
+      rgba(30, 35, 38, 0.8),
+      rgba(30, 35, 38, 1)
+    ),
+    url(Imagenes/fondo.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.inicio .contenido_banner {
+  padding: 20px;
+  background-color: var(--main);
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  border-radius: 40px;
+}
+.inicio .contenido_banner img {
+  margin-top: 40px;
+  border: 3px solid var(--secondary);
+  display: block;
+  width: 80%;
+  margin: auto;
+  border-radius: 100%;
+}
+.inicio .contenido_banner h1 {
+  margin-top: 10px;
+  font-size: 42px;
+  font-family: var(--Font);
+}
+.inicio .contenido_banner h2 {
+  font-size: 15px;
+  font-weight: normal;
+}
+.inicio .contenido_banner .redes a {
+  color: var(--white);
+  display: inline-flex;
+  text-decoration: none;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio .contenido_banner .redes a:hover {
+  background-color: var(--secondary);
+}
+
+/* Sobre Mi */
+
+.sobremi {
+  background-color: var(--main);
+  color: var(--white);
+  padding: 50px 20px;
+}
+.sobremi .contenido-seccion {
+  max-width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+.sobremi h2 {
+  font-size: 48px;
+  font-family: var(--Font);
+  text-align: center;
+  padding: 20px 0;
+}
+.sobremi .contenido-seccion p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+#btndescargarcv{
+  text-align: center;
+}
+.sobremi .contenido-seccion p span {
+  color: var(--secondary);
+  font-weight: bold;
+}
+.fila{
+  display: flex;
+  justify-content: center;
+}
+.sobremi .fila .col {
+  width: 60%;
+}
+.sobremi .fila .col h3 {
+  font-size: 28px;
+  font-family: var(--Font);
+  margin-bottom: 25px;
+  text-align: center;
+}
+.sobremi .fila .col ul {
+  list-style: none;
+}
+.sobremi .fila .col ul li {
+  margin: 12px 0;
+}
+.sobremi .fila .col ul li strong {
+  display: inline-block;
+  color: var(--secondary);
+  width: 130px;
+}
+.sobremi .fila .col ul li span a {
+  background-color: var(--secondary);
+  padding: 3px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.datospersonalessubtexto {
+  color: var(--white);
+}
+.sobremi .fila .col .contenedor-intereses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.intereses img{
+  max-width: 50px; /* Ajusta el tamaño máximo de las imágenes */
+  max-height: 50px; /* Ajusta el tamaño máximo de las imágenes */
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
+}
+.sobremi .fila .col .contenedor-intereses .intereses {
+  width: 100%;
+  height: 100px;
+  background-color: var(--grey);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.sobremi .fila .col .contenedor-intereses .intereses:hover {
+  background-color: var(--secondary);
+}
+
+.sobremi .fila .col .contenedor-intereses .intereses:hover i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.sobremi button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  width: fit-content;
+  display: block;
+  margin: 60px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: var(--white);
+  position: relative;
+  z-index: 10;
+  
+}
+/*
+.sobremi button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--secondary);
+  z-index: -1;
+  transition: 1s;
+}
+.sobremi button:hover .overlay {
+  width: 100%;
+}
+  */
+
+  .btnfos {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    margin: 3% auto 2em;
+    position: relative;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .btnfos-1 {
+    background: var(--grey);
+    font-weight: 100;
+  }
+  .btnfos-1 svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 45px;
+  }
+  .btnfos-1 rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-dasharray: 422, 0;
+  }
+  
+  .btnfos-1:hover {
+    background: rgba(225, 51, 45, 0);
+    letter-spacing: 1px;
+    font-weight: 900;
+  }
+  .btnfos-1:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+
+
+/*Mis Proyectos*/
+.misproyectos {
+  background-color: var(--grey);
+  color: var(--white);
+  padding: 50px 20px;
+}
+.misproyectos .contenido-seccion {
+  max-width: 100%;
+  margin: auto;
+}
+.misproyectos h2 {
+  font-size: 48px;
+  font-family: var(--Font);
+  text-align: center;
+  padding: 20px 0;
+}
+.misproyectos .galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crear columnas autoajustables */
+  gap: 20px; /* Espacio entre las celdas */
+  justify-items: center; /* Centrar los elementos dentro de las celdas */
+}
+
+.misproyectos .galeria .proyecto {
+  position: relative;
+    max-width: 100%;
+    height: 265px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.misproyectos .galeria .proyecto img {
+  display: flex;
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(-48px);
+}
+a{
+  color: var(--white);
+}
+
+.misproyectos .galeria .proyecto .overlay {
+  position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28, 182, 152, 0.8), rgba(28, 182, 152, 0.8));
+    display: flex;
+    place-items: center;
+    transition: 0.3s;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.misproyectos .galeria .proyecto .overlay p{
+  width: 90%;
+}
+.misproyectos .galeria .proyecto .overlay h3 {
+  margin-bottom: 20px;
+  transition: 0.3s;
+  text-shadow: 0px 0px 10px #737373;
+  text-transform: uppercase;
+}
+
+.misproyectos .galeria .proyecto .overlay:hover {
+  opacity: 1;
+}
+
+.misproyectos .galeria .proyecto .overlay:hover h3 {
+  margin-bottom: 10px;
+}
+#arriba{
+    position: fixed;
+    bottom: 4.5%;
+    right: 22px;
+    z-index: 99;
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    transition: .2s;
+    background-color: var(--secondary);
+}
+#arriba::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    background-size: cover;
+    z-index: -3;
+    border-radius: 50%;
+}
+footer {
+    background-color: var(--grey);
+    color: var(--white);
+    color: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 152px;
+    padding-top: 30px;
+}
+footer .redes {
+  margin-bottom: -20px;
+}
+footer .redes a {
+  color: var(--white);
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary);
+    color: var(--white);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+@media (max-width: 830px) {
+  .container-header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .logo{
+    width: 90%;
+  }
+  #nav {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  #nav ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 90px;
+    left: 0;
+    background-color: var(--main);
+    /* text-align: center; */
+    z-index: 15;
+    width: 100%;
+  }
+  #nav ul li {
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+  }
+  #nav.active {
+    display: flex;
+  }
+
+  .responsive {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-top: 10px;
+    line-height: 1;
+  }
+
+  .intereses i{
+font-size: 70px;
+  }
+  .sobremi .fila .col {
+    width: 100%;
+  }
+  .misproyectos .galeria {
+    grid-template-columns: repeat(1, 1fr); /* Crear columnas autoajustables */
+  }
+  .misproyectos .galeria .proyecto img{
+    transform: translateX(0px);
+  }
+}
