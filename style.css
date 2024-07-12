@@ -155,6 +155,12 @@ html {
   color: var(--white);
   padding: 50px 20px;
 }
+.Hola{
+  margin-bottom: 31px;
+}
+.Descripcion-SobreMi{
+  margin-bottom: 60px;
+}
 .sobremi .contenido-seccion {
   max-width: 100%;
   margin: auto;
@@ -167,17 +173,20 @@ html {
   padding: 20px 0;
 }
 .sobremi .contenido-seccion p {
-    margin-bottom: 20px;
-    font-weight: bold;
+    
+    font-size: 23px;
     text-align: justify;
+    font-weight: 300;
 }
 
 #btndescargarcv{
   text-align: center;
+  font-size: 20px;
 }
 .sobremi .contenido-seccion p span {
   color: var(--secondary);
   font-weight: bold;
+  font-size: 70px;
 }
 .fila{
   display: flex;
@@ -309,7 +318,6 @@ html {
   
   .btnfos-1:hover {
     background: rgba(225, 51, 45, 0);
-    letter-spacing: 1px;
     font-weight: 900;
   }
   .btnfos-1:hover rect {
@@ -366,7 +374,7 @@ a{
 .misproyectos .galeria .proyecto .overlay {
   position: absolute;
     top: 0;
-    width: 87%;
+    width: 86.5%;
     height: 100%;
     text-align: center;
     background: linear-gradient(rgba(28, 182, 152, 0.8), rgba(28, 182, 152, 0.8));
